@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import { Button } from '@chakra-ui/core';
 
 import Header from '../components/Header';
+import Main from '../components/Main';
 import Container from '../components/Container';
+import TrailerSlider from '../components/TrailerSlider';
 import VideoCards from '../components/VideoCards';
 
 import { subtract, increment } from '../store/actions/math';
@@ -19,13 +21,14 @@ export class Index extends PureComponent {
 
     return (
       <Fragment>
-        <Container>
-          <Header />
-        </Container>
-        <VideoCards cards={[1, 2, 3, 4]} />
-        {number}
-        <Button onClick={testDown}> Subtract </Button>
-        <Button onClick={testUp}> Add </Button>
+        <Header></Header>
+        <Main>
+          <TrailerSlider></TrailerSlider>
+          <VideoCards cards={[1, 2, 3, 4, 5, 6]}></VideoCards>
+          <VideoCards cards={[1, 2, 3, 4, 5, 6]}></VideoCards>
+          <VideoCards cards={[1, 2, 3, 4, 5, 6]}></VideoCards>
+          <VideoCards cards={[1, 2, 3, 4, 5, 6]}></VideoCards>
+        </Main>
       </Fragment>
     )
   }
