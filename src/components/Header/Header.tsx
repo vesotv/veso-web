@@ -1,24 +1,17 @@
 import { Flex, Heading, Image } from '@chakra-ui/core';
 import React from 'react';
-import Logo from '../assets/images/logo.png';
+import Logo from '../../assets/images/logo.png';
+import style from './Header.module.css';
 
 const Header: React.FunctionComponent = () => (
-  <Flex
-    as="nav"
-    align="center"
-    justify="space-between"
-    wrap="wrap"
-    padding="0.6rem"
-    bg="black"
-    height="50px"
-    color="white"
-  >
+  <div className={style.Header}>
     <Flex>
       <Heading as="h1" size="lg">
         <Image margin="2px" height="25px" src={Logo} alt="Veso" />
       </Heading>
+      <h1>I am a Heading</h1>
     </Flex>
-  </Flex>
+  </div>
 );
 
 export default Header;

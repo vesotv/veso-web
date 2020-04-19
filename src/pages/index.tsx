@@ -3,7 +3,7 @@ import { withTheme } from 'emotion-theming';
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import Container from '../components/Container';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import VideoCards from '../components/VideoCards';
 import { State } from '../store';
 import { increment, subtract } from '../store/actions/math';
