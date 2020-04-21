@@ -1,5 +1,6 @@
 import { MakeStore } from 'next-redux-wrapper';
 import { combineReducers, createStore } from 'redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 import reducers from './reducers';
 import { MathState } from './reducers/math';
 
@@ -13,7 +14,7 @@ const combinedReducers = combineReducers(reducers);
  * @param {object} initialState The store's initial state (on the client side, the state of the server-side store is passed here)
  */
 const makeStore: MakeStore = (initialState: State) => {
-  return createStore(combinedReducers, initialState);
+  return createStore(combinedReducers, initialState, devToolsEnhancer({}));
 };
 
 export default makeStore;
